@@ -1,0 +1,490 @@
+
+/* ========================================
+   VARIÁVEIS DE CORES
+======================================== */
+
+:root {
+    --fundo: #ebeae8;
+    --fundo-secundario: #ffffff;
+
+    --texto: #252525;
+    --texto-secundario: #66635E;
+
+    --destaque: #8A6A3F;
+
+    --borda: #C8C2B7;
+}
+
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background-color: var(--fundo);
+
+    padding: 25px 8%;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo h1 {
+    color: var(--texto);
+
+    font-size: 2rem;
+
+    letter-spacing: 2px;
+}
+
+.logo p {
+    color: var(--texto-secundario);
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+main {
+    width: 100%;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background-color: var(--fundo-secundario);
+}
+
+.hero-imagem {
+    height: 520px;
+
+    overflow: hidden;
+}
+
+.hero-imagem img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.hero-conteudo {
+    max-width: 600px;
+}
+
+.hero-conteudo > p:first-child {
+    color: var(--destaque);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.hero-conteudo h2 {
+    color: var(--texto);
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero-conteudo p:last-child {
+    color: var(--texto-secundario);
+
+    font-size: 1.1rem;
+
+    max-width: 500px;
+}
+
+
+/* ========================================
+   INTRODUÇÃO
+======================================== */
+
+.introducao {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--fundo);
+}
+
+.introducao h2 {
+    color: var(--texto);
+
+    font-size: 2.4rem;
+
+    margin-bottom: 25px;
+}
+
+.introducao h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background-color: var(--destaque);
+
+    margin-top: 15px;
+}
+
+.introducao p {
+    color: var(--texto-secundario);
+
+    margin-bottom: 20px;
+
+    max-width: 600px;
+}
+
+.introducao figure {
+    background-color: var(--fundo-secundario);
+
+    padding: 10px;
+
+    border: 1px solid var(--borda);
+}
+
+.introducao figcaption {
+    color: var(--texto-secundario);
+
+    padding: 15px 5px 5px;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   DESTAQUES
+======================================== */
+
+.destaques {
+    background-color: var(--fundo-secundario);
+}
+
+.destaques > header {
+    padding: 0;
+
+    border: none;
+
+    margin-bottom: 45px;
+}
+
+.destaques > header h2 {
+    color: var(--texto);
+
+    font-size: 2.4rem;
+
+    margin-bottom: 10px;
+}
+
+.destaques > header p {
+    color: var(--texto-secundario);
+}
+
+.destaques-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.destaques article {
+    background-color: var(--fundo);
+
+    border: 1px solid var(--borda);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.destaques article:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.destaques article figure {
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.destaques article img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.destaques article:hover img {
+    transform: scale(1.04);
+}
+
+.destaques article h3 {
+    color: var(--texto);
+
+    font-size: 1.5rem;
+
+    padding: 25px 25px 10px;
+}
+
+.destaques article p {
+    color: var(--texto-secundario);
+
+    padding: 0 25px 30px;
+}
+
+
+/* ========================================
+   MOMENTO HISTÓRICO
+======================================== */
+
+.momento-historico {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--fundo);
+}
+
+.momento-historico figure {
+    height: 420px;
+
+    overflow: hidden;
+}
+
+.momento-historico img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.momento-historico div > p:first-child {
+    color: var(--destaque);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.momento-historico h2 {
+    color: var(--texto);
+
+    font-size: 2.6rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.momento-historico div > p:last-child {
+    color: var(--texto-secundario);
+
+    max-width: 500px;
+}
+
+
+/* ========================================
+   CHAMADA FINAL
+======================================== */
+
+.chamada {
+    text-align: center;
+
+    background-color: var(--fundo-secundario);
+
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+
+.chamada h2 {
+    color: var(--texto);
+
+    font-size: 2.8rem;
+
+    margin-bottom: 10px;
+}
+
+.chamada p {
+    color: var(--texto-secundario);
+
+    font-size: 1.1rem;
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    background-color: #252525;
+
+    text-align: center;
+
+    padding: 35px 8%;
+}
+
+footer p {
+    color: #D8D3C8;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-imagem {
+        height: 400px;
+    }
+
+    .introducao {
+        grid-template-columns: 1fr;
+    }
+
+    .momento-historico {
+        grid-template-columns: 1fr;
+    }
+
+    .destaques-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 6%;
+    }
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-imagem {
+        height: 300px;
+    }
+
+    .hero-conteudo h2 {
+        font-size: 2.6rem;
+    }
+
+    .introducao h2,
+    .destaques > header h2 {
+        font-size: 2rem;
+    }
+
+    .momento-historico h2 {
+        font-size: 2.1rem;
+    }
+
+    .momento-historico figure {
+        height: 280px;
+    }
+
+    .chamada h2 {
+        font-size: 2.1rem;
+    }
+
+}
+
