@@ -59,6 +59,40 @@ header {
     padding: 25px 8%;
 
     border-bottom: 1px solid var(--borda);
+
+     display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+nav a {
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--destaque);
 }
 
 .logo h1 {
@@ -488,3 +522,866 @@ footer p {
 
 }
 
+/* ========================================
+   PÁGINA - HISTÓRIA DAS MOTOS
+======================================== */
+
+
+/* ========================================
+   ABERTURA DA HISTÓRIA
+======================================== */
+
+.historia-abertura {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--fundo-secundario);
+}
+
+.historia-abertura-conteudo {
+    max-width: 600px;
+}
+
+.titulo-secao {
+    color: var(--destaque);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.historia-abertura h2 {
+    color: var(--texto);
+
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.historia-abertura-conteudo > p:last-child {
+    color: var(--texto-secundario);
+
+    font-size: 1.1rem;
+
+    max-width: 550px;
+}
+
+.historia-abertura-imagem {
+    height: 500px;
+
+    background-color: var(--fundo);
+
+    padding: 10px;
+
+    border: 1px solid var(--borda);
+}
+
+.historia-abertura-imagem img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.historia-abertura-imagem figcaption {
+    color: var(--texto-secundario);
+
+    padding: 10px 5px;
+
+    font-size: 0.85rem;
+}
+
+
+/* ========================================
+   CABEÇALHOS DAS SEÇÕES
+======================================== */
+
+.secao-header {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    margin-bottom: 50px;
+}
+
+.secao-header h2 {
+    color: var(--texto);
+
+    font-size: 2.6rem;
+
+    margin-bottom: 10px;
+}
+
+.secao-header > p:last-child {
+    color: var(--texto-secundario);
+
+    max-width: 650px;
+}
+
+
+/* ========================================
+   LINHA DO TEMPO
+======================================== */
+
+.linha-tempo {
+    background-color: var(--fundo);
+}
+
+.linha-tempo-marcadores {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 0 auto 80px;
+
+    padding: 0 10px;
+}
+
+.linha-tempo-marcadores::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 0;
+
+    right: 0;
+
+    height: 2px;
+
+    background-color: var(--borda);
+
+    z-index: 0;
+}
+
+.linha-tempo-marcadores span {
+    position: relative;
+
+    z-index: 1;
+
+    background-color: var(--fundo);
+
+    border: 2px solid var(--destaque);
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--texto);
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   EVENTOS HISTÓRICOS
+======================================== */
+
+.evento-historico {
+    max-width: 1100px;
+
+    margin: 0 auto 100px;
+}
+
+.evento-ano {
+    margin-bottom: 20px;
+}
+
+.evento-ano span {
+    color: var(--destaque);
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.evento-conteudo {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.evento-conteudo figure {
+    height: 400px;
+
+    overflow: hidden;
+
+    background-color: var(--fundo-secundario);
+
+    padding: 8px;
+
+    border: 1px solid var(--borda);
+}
+
+.evento-conteudo figure img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.evento-conteudo figcaption {
+    display: none;
+}
+
+.evento-texto h3 {
+    color: var(--texto);
+
+    font-size: 2.3rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.evento-texto p:not(.titulo-secao) {
+    color: var(--texto-secundario);
+
+    margin-bottom: 15px;
+
+    max-width: 500px;
+}
+
+
+/* ========================================
+   EVENTO INVERTIDO
+======================================== */
+
+.evento-invertido .evento-conteudo {
+    grid-template-columns: 1fr 1fr;
+}
+
+.evento-invertido .evento-conteudo figure {
+    order: 2;
+}
+
+.evento-invertido .evento-texto {
+    order: 1;
+}
+
+
+/* ========================================
+   MOTO EM DESTAQUE
+======================================== */
+
+.moto-destaque {
+    max-width: 1200px;
+
+    margin: 0 auto 100px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    background-color: var(--fundo-secundario);
+
+    border: 1px solid var(--borda);
+}
+
+.moto-destaque-imagem {
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+.moto-destaque-imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.moto-destaque-conteudo {
+    padding: 60px;
+    
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.moto-destaque-conteudo h3 {
+    color: var(--texto);
+
+    font-size: 2.8rem;
+
+    margin-bottom: 20px;
+}
+
+.moto-destaque-conteudo > p:not(.titulo-secao) {
+    color: var(--texto-secundario);
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   FICHA DA MOTO
+======================================== */
+
+.ficha-moto {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--borda);
+
+    padding-top: 25px;
+
+    gap: 15px;
+}
+
+.ficha-moto div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.ficha-moto strong {
+    color: var(--texto);
+
+    font-size: 1.2rem;
+}
+
+.ficha-moto span {
+    color: var(--texto-secundario);
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   CURIOSIDADE
+======================================== */
+
+.curiosidade {
+    max-width: 900px;
+
+    margin: 0 auto 100px;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+
+    background-color: var(--fundo-secundario);
+
+    border: 1px solid var(--borda);
+
+    border-left: 4px solid var(--destaque);
+}
+
+.curiosidade-icone {
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background-color: var(--destaque);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+.curiosidade h3 {
+    color: var(--texto);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+}
+
+.curiosidade p:not(.titulo-secao) {
+    color: var(--texto-secundario);
+}
+
+
+/* ========================================
+   GALERIA DE PERÍODO
+======================================== */
+
+.galeria-periodo {
+    background-color: var(--fundo-secundario);
+}
+
+.motos-periodo {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card-moto {
+    background-color: var(--fundo);
+
+    border: 1px solid var(--borda);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-moto:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-moto figure {
+    height: 250px;
+
+    overflow: hidden;
+}
+
+.card-moto figure img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.card-moto:hover img {
+    transform: scale(1.04);
+}
+
+.card-moto > div {
+    padding: 25px;
+}
+
+.card-moto span {
+    color: var(--destaque);
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.card-moto h3 {
+    color: var(--texto);
+
+    font-size: 1.6rem;
+
+    margin: 5px 0 10px;
+}
+
+.card-moto p {
+    color: var(--texto-secundario);
+
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   EVOLUÇÃO DAS ESPORTIVAS
+======================================== */
+
+.evolucao-esportivas {
+    background-color: var(--fundo);
+}
+
+.evolucao-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.evolucao-container article {
+    background-color: var(--fundo-secundario);
+
+    border: 1px solid var(--borda);
+}
+
+.evolucao-container figure {
+    height: 260px;
+
+    overflow: hidden;
+}
+
+.evolucao-container figure img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.evolucao-container article > div {
+    padding: 25px;
+}
+
+.evolucao-container span {
+    color: var(--destaque);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.evolucao-container h3 {
+    color: var(--texto);
+
+    font-size: 1.5rem;
+
+    margin: 5px 0 10px;
+}
+
+.evolucao-container p {
+    color: var(--texto-secundario);
+}
+
+
+/* ========================================
+   TECNOLOGIA
+======================================== */
+
+.tecnologia {
+    background-color: var(--fundo-secundario);
+}
+
+.tecnologia-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.tecnologia-container article {
+    padding: 30px;
+
+    background-color: var(--fundo);
+
+    border: 1px solid var(--borda);
+}
+
+.tecnologia-container span {
+    color: var(--destaque);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+}
+
+.tecnologia-container h3 {
+    color: var(--texto);
+
+    font-size: 1.3rem;
+
+    margin: 15px 0 10px;
+}
+
+.tecnologia-container p {
+    color: var(--texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   FUTURO
+======================================== */
+
+.futuro {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background-color: var(--fundo);
+}
+
+.futuro figure {
+    height: 420px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--borda);
+}
+
+.futuro figure img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.futuro h2 {
+    color: var(--texto);
+
+    font-size: 2.6rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.futuro div > p:not(.titulo-secao) {
+    color: var(--texto-secundario);
+
+    margin-bottom: 20px;
+
+    max-width: 500px;
+}
+
+
+/* ========================================
+   FINAL DA HISTÓRIA
+======================================== */
+
+.historia-final {
+    text-align: center;
+
+    background-color: var(--fundo-secundario);
+
+    border-top: 1px solid var(--borda);
+}
+
+.historia-final > p {
+    color: var(--destaque);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.historia-final h2 {
+    color: var(--texto);
+
+    font-size: 2.8rem;
+
+    line-height: 1.15;
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+}
+
+.historia-final a {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: var(--texto);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.historia-final a:hover {
+    background-color: var(--destaque);
+}
+
+
+/* ========================================
+   RESPONSIVIDADE - HISTÓRIA
+======================================== */
+
+@media (max-width: 900px) {
+
+    .historia-abertura {
+        grid-template-columns: 1fr;
+    }
+
+    .historia-abertura-imagem {
+        height: 400px;
+    }
+
+    .linha-tempo-marcadores {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        gap: 30px;
+    }
+
+    .linha-tempo-marcadores::before {
+        display: none;
+    }
+
+    .evento-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-invertido .evento-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-invertido .evento-conteudo figure {
+        order: 1;
+    }
+
+    .evento-invertido .evento-texto {
+        order: 2;
+    }
+
+    .moto-destaque {
+        grid-template-columns: 1fr;
+    }
+
+    .moto-destaque-imagem {
+        min-height: 400px;
+    }
+
+    .motos-periodo {
+        grid-template-columns: 1fr;
+    }
+
+    .evolucao-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tecnologia-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .futuro {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .historia-abertura h2 {
+        font-size: 2.6rem;
+    }
+
+    .historia-abertura-imagem {
+        height: 300px;
+    }
+
+    .secao-header h2 {
+        font-size: 2rem;
+    }
+
+    .evento-historico {
+        margin-bottom: 70px;
+    }
+
+    .evento-conteudo figure {
+        height: 280px;
+    }
+
+    .evento-texto h3 {
+        font-size: 1.9rem;
+    }
+
+    .moto-destaque-imagem {
+        min-height: 280px;
+    }
+
+    .moto-destaque-conteudo {
+        padding: 30px;
+    }
+
+    .moto-destaque-conteudo h3 {
+        font-size: 2.1rem;
+    }
+
+    .ficha-moto {
+        grid-template-columns: 1fr;
+    }
+
+    .curiosidade {
+        grid-template-columns: 1fr;
+
+        padding: 30px;
+    }
+
+    .tecnologia-container {
+        grid-template-columns: 1fr;
+    }
+
+    .futuro figure {
+        height: 280px;
+    }
+
+    .futuro h2 {
+        font-size: 2.1rem;
+    }
+
+    .historia-final h2 {
+        font-size: 2.1rem;
+    }
+
+}
