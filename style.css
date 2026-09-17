@@ -59,6 +59,38 @@ header {
     padding: 25px 8%;
 
     border-bottom: 1px solid var(--borda);
+  display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+nav ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+nav a {
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--destaque);
 }
 
 .logo h1 {
