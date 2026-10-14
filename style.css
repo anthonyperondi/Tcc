@@ -1383,3 +1383,321 @@ footer p {
     }
 
 }
+
+
+/* ========================================
+   PÁGINA ACIDENTES — MOTOLIFE
+======================================== */
+
+/* Abertura da página */
+.acidentes-abertura {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 8%;
+}
+
+.acidentes-abertura-conteudo {
+    max-width: 520px;
+}
+
+.titulo-secao {
+    color: var(--destaque);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.acidentes-abertura h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--texto);
+}
+
+.acidentes-abertura-conteudo > p:last-child {
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.acidentes-abertura-imagem {
+    margin: 0;
+    width: 100%;
+}
+
+.acidentes-abertura-imagem img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.acidentes-abertura-imagem figcaption {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+
+/* Seção dos acidentes */
+.acidentes-marcantes {
+    padding: 70px 8%;
+    background-color: var(--fundo-secundario);
+}
+
+.acidentes-marcantes .secao-header,
+.seguranca-motociclismo .secao-header {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.secao-header h2 {
+    color: var(--texto);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.secao-header > p:last-child {
+    color: var(--texto-secundario);
+    line-height: 1.7;
+}
+
+
+/* Organização dos cards */
+.acidentes-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-acidente {
+    background-color: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 0;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.card-acidente:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+.card-acidente figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.card-acidente figure img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.35s ease;
+}
+
+.card-acidente:hover figure img {
+    transform: scale(1.03);
+}
+
+.card-acidente figcaption {
+    padding: 10px 20px;
+    color: var(--texto-secundario);
+    font-size: 0.8rem;
+    background-color: var(--fundo-secundario);
+    border-bottom: 1px solid var(--borda);
+}
+
+.card-acidente-conteudo {
+    padding: 25px;
+}
+
+.card-acidente-conteudo span {
+    display: block;
+    color: var(--destaque);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.card-acidente-conteudo h3 {
+    color: var(--texto);
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.card-acidente-conteudo p {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+
+/* Evolução da segurança */
+.seguranca-motociclismo {
+    padding: 70px 8%;
+    background-color: var(--fundo);
+}
+
+.seguranca-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seguranca-container article {
+    padding: 25px 20px;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+}
+
+.seguranca-container article span {
+    display: block;
+    color: var(--destaque);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.seguranca-container h3 {
+    color: var(--texto);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.seguranca-container article p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* Encerramento da página */
+.acidentes-final {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: var(--texto);
+    color: var(--fundo-secundario);
+}
+
+.acidentes-final > p {
+    color: #C8A779;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.acidentes-final h2 {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.3;
+}
+
+.acidentes-final a {
+    display: inline-block;
+    padding: 12px 25px;
+    color: var(--fundo-secundario);
+    text-decoration: none;
+    border: 1px solid #C8A779;
+    border-radius: 4px;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.acidentes-final a:hover {
+    background-color: #C8A779;
+    color: var(--texto);
+}
+
+
+/* Ajustes para tablets */
+@media (max-width: 900px) {
+    .acidentes-abertura {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 6%;
+    }
+
+    .acidentes-abertura-conteudo {
+        max-width: 700px;
+    }
+
+    .acidentes-abertura-imagem img {
+        height: 350px;
+    }
+
+    .acidentes-marcantes,
+    .seguranca-motociclismo {
+        padding: 55px 6%;
+    }
+
+    .acidentes-container {
+        gap: 22px;
+    }
+
+    .card-acidente figure img {
+        height: 250px;
+    }
+
+    .seguranca-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .acidentes-abertura {
+        padding: 35px 5%;
+    }
+
+    .acidentes-abertura-imagem img {
+        height: 250px;
+    }
+
+    .acidentes-marcantes,
+    .seguranca-motociclismo {
+        padding: 45px 5%;
+    }
+
+    .acidentes-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-acidente figure img {
+        height: 240px;
+    }
+
+    .card-acidente-conteudo {
+        padding: 20px;
+    }
+
+    .seguranca-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .acidentes-final {
+        padding: 50px 6%;
+    }
+}
