@@ -488,7 +488,7 @@ footer p {
     header {
         padding: 20px 6%;
     }
-
+     
     .hero {
         gap: 30px;
     }
@@ -1462,6 +1462,7 @@ footer p {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     line-height: 1.2;
     margin-bottom: 15px;
+    
 }
 
 .secao-header > p:last-child {
@@ -1902,4 +1903,43 @@ footer p {
     .pilotos-final {
         padding: 35px 6%;
     }
+}
+
+
+
+/* Evita que o conteúdo das grades force
+   a página a ficar mais larga que a tela */
+.hero-conteudo,
+.introducao > *,
+.momento-historico > *,
+.historia-abertura > *,
+.evento-conteudo > *,
+.moto-destaque-conteudo,
+.futuro > *,
+.acidentes-abertura > *,
+.card-acidente,
+.card-piloto,
+.card-moto {
+    min-width: 0;
+}
+
+/* Permite quebrar palavras muito compridas */
+.hero h2,
+.introducao h2,
+.momento-historico h2,
+.historia-abertura h2,
+.evento-texto h3,
+.moto-destaque-conteudo h3,
+.futuro h2,
+.acidentes-abertura h2,
+.card-acidente-conteudo h3,
+.card-piloto-conteudo h3 {
+    overflow-wrap: break-word;
+}
+
+/* Cabeçalhos internos devem empilhar
+   seus títulos e parágrafos */
+.destaques > header,
+.secao-header {
+    display: block;
 }
