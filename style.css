@@ -1701,3 +1701,205 @@ footer p {
         padding: 50px 6%;
     }
 }
+
+
+/* ==============================
+   PÁGINA GRANDES PILOTOS
+============================== */
+
+/* Abertura */
+.pilotos-abertura {
+    padding: 60px 8%;
+    background-color: var(--fundo-secundario);
+    border-bottom: 1px solid var(--borda);
+}
+
+.pilotos-abertura-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pilotos-abertura h2 {
+    color: var(--destaque);
+    font-size: 2.5rem;
+    margin: 0 0 20px;
+}
+
+.pilotos-abertura p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.pilotos-abertura-imagem {
+    max-width: 1100px;
+    height: 350px;
+    margin: 35px auto 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.pilotos-abertura-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Seção dos pilotos */
+.grandes-pilotos {
+    padding: 60px 8%;
+}
+
+.titulo-secao {
+    color: var(--destaque);
+    font-size: 2rem;
+    margin: 0 0 15px;
+}
+
+.secao-header {
+    margin-bottom: 30px;
+}
+
+.pilotos-container {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+}
+
+/* Cards */
+.card-piloto {
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-piloto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-piloto img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Conteúdo e nomes dos pilotos */
+.card-piloto-conteudo {
+    padding: 28px;
+}
+
+.card-piloto-conteudo h3 {
+    color: var(--destaque);
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--destaque);
+}
+
+.card-piloto-conteudo p {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+.card-piloto-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
+/* Encerramento */
+.pilotos-final {
+    padding: 45px 8%;
+    background-color: var(--fundo-secundario);
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+.pilotos-final h2 {
+    color: var(--destaque);
+    font-size: 1.8rem;
+    margin: 0 0 15px;
+}
+
+.pilotos-final p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    color: var(--texto-secundario);
+    line-height: 1.8;
+}
+
+/* Botão voltar ao início */
+.pilotos-final a {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: var(--texto);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.pilotos-final a:hover {
+   background-color: var(--destaque);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pilotos-abertura {
+        padding: 40px 6%;
+    }
+
+    .pilotos-abertura h2 {
+        font-size: 2rem;
+    }
+
+    .pilotos-abertura-imagem {
+        height: 250px;
+    }
+
+    .grandes-pilotos {
+        padding: 40px 6%;
+    }
+
+    .titulo-secao {
+        font-size: 1.7rem;
+    }
+
+    .pilotos-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-piloto img {
+        height: 250px;
+    }
+
+    .card-piloto-conteudo {
+        padding: 22px;
+    }
+
+    .card-piloto-conteudo h3 {
+        font-size: 1.4rem;
+    }
+
+    .pilotos-final {
+        padding: 35px 6%;
+    }
+}
