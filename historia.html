@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 
     <title>MotoLife | História das Motos</title>
@@ -23,44 +23,33 @@
          CABEÇALHO
     ========================================= -->
 
-    <header>
+   <header class="site-header">
+  <div class="logo">
+    <h1>MotoLife</h1>
+    <p>Museu das Motos</p>
+  </div>
 
-        <div class="logo">
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+    aria-controls="menu-principal"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-            <h1>MotoLife</h1>
-
-            <p>Museu das Motos</p>
-
-        </div>
-
-
-        <!-- MENU -->
-
-        <nav>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">Início</a>
-                </li>
-
-                <li>
-                    <a href="historia.html">História</a>
-                </li>
-
-                <li>
-                    <a href="acidentes.html">Acidentes</a>
-                </li>
-
-                <li>
-                    <a href="pilotos.html">Grandes Pilotos</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
+  <nav id="menu-principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="historia.html">História</a></li>
+      <li><a href="acidentes.html">Acidentes</a></li>
+      <li><a href="pilotos.html">Grandes Pilotos</a></li>
+    </ul>
+  </nav>
+</header>
 
 
     <main>
