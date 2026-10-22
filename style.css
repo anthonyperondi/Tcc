@@ -2031,3 +2031,35 @@ footer p {
     }
 
 }
+
+.site-header .logo img {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* LOGO DO MOTOLIFE */
+
+.site-header .logo {
+    flex-shrink: 0;
+}
+
+.site-header .logo a {
+    display: block;
+}
+
+.site-header .logo img {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.site-header .logo img:hover {
+    filter: drop-shadow(0 3px 8px rgba(138, 106, 63, 0.65));
+    transform: scale(1.03);
+}
